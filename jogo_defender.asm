@@ -1,3 +1,4 @@
+#O jogo funciona nas medidas 4,4, 512, 256. Armazenado na memória Heap
 main:	lui $9, 0x1004
 
 	addi $11, $0, 128 #tamanho colunas
