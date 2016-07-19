@@ -9,6 +9,12 @@ red:	lui $9, 0x1004
 	
 	addi $15, $15, 1 #valor da posicao 1 da nave
 	
+	lui $9, 0x1004
+	addi $9, $9, 15000 #inicio da nave
+	jal print_alien
+	
+	addi $19, $19, 1 #valor da posicao 1 da nave
+	
 ####################################################################
 	#### Teclado
 #####################################################################
@@ -47,12 +53,13 @@ fim:
 pos2:
 	
 	lui $9, 0x1004
-	addi $9, $9, 5120 
-	jal print_alien
+	addi $9, $9, 6644
+	jal print_navepreta
 	
+	addi $15, $0, 1
 	
 	lui $9, 0x1004
-	addi $9, $9, 8000 #local onde comeÃ§ar a imprimir o alien
+	addi $9, $9, 6000 #local onde comeÃ§ar a imprimir o alien
 	jal print_nave
 	
 	addi $15, $0, 3
@@ -252,19 +259,15 @@ print_nave:
 	jal cinza_escuro
 	jal cinza_escuro
 	
+
+
 ####################
-### fim do passaro
+### fim da nave
 	jr $30
-####################
-
-
-####################################################################
-##################### PRINT ALIEN ##################################
-####################################################################
-
+	
 print_alien:
 
-	add $30, $0, $29 #inicio do alien 
+	add $30, $0, $31
 
 #linha1: 
 	addi $9, $9, 300 #começa na coluna 13
@@ -444,21 +447,202 @@ print_alien:
 	
 
 
+####################
+### fim da nave
+	jr $30
+####################
 ####################################################################################################################
-######################################### FIM ALIEN ################################################################
+#### nave_preta
 ####################################################################################################################
+
+print_navepreta:
+
+	add $30, $0, $31
+
+#linha1: 
+	addi $9, $9, 52 #começa na coluna 13
+
+		
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+
+#linha2:
+	addi $9, $9, 500 #passa para a proxima linha
+	
+	
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+
+#linha3:
+	addi $9, $9, 480 #passa para a proxima linha
+
+	
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+	
+	
+#linha4:
+	addi $9, $9, 468 #passa para a proxima linha
+
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+#linha5:
+	addi $9, $9, 456 #passa para a proxima linha
+
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+	
+#linha6:
+	addi $9, $9, 452 #passa para a proxima linha
+
+	
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+
+#linha7:
+	addi $9, $9, 448 #passa para a proxima linha
 
 
 	
-####################
-### fim do alien
-	jr $30
-####################
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+
+#linha8:
+	addi $9, $9, 456 #passa para a proxima linha
+
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
 	
-####################
-### fim do passaro
+	
+#linha9:
+	addi $9, $9, 460 #passa para a proxima linha
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+	
+	
+#linha10:
+	addi $9, $9, 468 #passa para a proxima linha
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+	
+	
+	
+#linha11:
+	addi $9, $9, 476 #passa para a proxima linha
+
+	jal preto
+	jal preto
+	jal preto
+	jal preto
+
 	jr $30
-####################
+	
 
 #####################################################################
 	#COR
