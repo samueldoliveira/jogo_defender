@@ -3,17 +3,17 @@ main:	lui $9, 0x1004
 	addi $11, $0, 128 #tamanho colunas
 	addi $12, $0, 64 #tamanho linhas
 	
-red:	lui $9, 0x1004
+print:	lui $9, 0x1004
 	addi $9, $9, 6200 #inicio da nave
 	jal print_nave
 	
 	addi $15, $15, 1 #valor da posicao 1 da nave
 	
 	lui $9, 0x1004
-	addi $9, $9, 15000 #inicio da nave
+	addi $9, $9, 15000 #inicio do alien
 	jal print_alien
 	
-	addi $19, $19, 1 #valor da posicao 1 da nave
+	addi $19, $19, 1 #valor da posicao 1 do alien
 	
 ####################################################################
 	#### Teclado
@@ -51,15 +51,15 @@ fim:
 		
 	
 pos2:
-	
+	#Apaga a nave
 	lui $9, 0x1004
-	addi $9, $9, 6644
+	addi $9, $9, 6644 #local onde comeca a desenhar a nave preta
 	jal print_navepreta
 	
 	addi $15, $0, 1
 	
 	lui $9, 0x1004
-	addi $9, $9, 6000 #local onde começar a imprimir o alien
+	addi $9, $9, 6000 #local onde começar a imprimir a nave
 	jal print_nave
 	
 	addi $15, $0, 3
@@ -68,8 +68,6 @@ pos2:
 	
 	
 
-
-############## Passaro
 
 ############## nave
 
@@ -448,7 +446,7 @@ print_alien:
 
 
 ####################
-### fim da nave
+### fim do alien
 	jr $30
 ####################
 ####################################################################################################################
@@ -643,7 +641,7 @@ print_navepreta:
 
 	jr $30
 	
-
+#################fim da nave preta
 #####################################################################
 	#COR
 #####################################################################
