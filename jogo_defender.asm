@@ -1,4 +1,5 @@
 #O jogo funciona nas medidas 4,4, 512, 256. Armazenado na memória Heap
+#Para fazer a nave se mover, aperta a tecla "d", minúsculo.
 main:	lui $9, 0x1004
 
 	addi $11, $0, 128 #tamanho colunas
